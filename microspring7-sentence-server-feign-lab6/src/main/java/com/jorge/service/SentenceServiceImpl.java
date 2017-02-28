@@ -39,6 +39,29 @@ public class SentenceServiceImpl implements SentenceService {
 		return sentence;
 	}
 
+	/*
+	 * These @Autowired's on setters are the same as doing this:
+	 * 
+	 *  @Autowired
+	 * 	VerbClient verbService;
+	 * 
+	 *  @Autowired
+	 *	SubjectClient subjectService;
+	 *
+	 *  @Autowired
+	 *	ArticleClient articleService;
+	 *
+	 *  @Autowired
+	 *	AdjectiveClient adjectiveService;
+	 *
+	 *  @Autowired
+	 *	NounClient nounService;
+	 * 
+	 * This way wouldn't need the setters below
+	 * Check this: http://stackoverflow.com/questions/33562731/spring-autowire-property-vs-setter
+	 * 
+	 */
+	
 	@Autowired
 	public void setVerbService(VerbClient verbService) {
 		this.verbService = verbService;
