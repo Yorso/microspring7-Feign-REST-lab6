@@ -39,7 +39,7 @@
 		</dependency>
 	
 		<!--  This dependency is necessary to use Ribbon client balancer here, in the client sever.
-			  microspring6-word-server-ribbon-lab5 is the server and microspring6-sentence-server-ribbon-lab5 
+			  microspring7-word-server-ribbon-lab6 is the server and microspring7-sentence-server-ribbon-lab6 
 			  is the client server where Ribbon client balancer dependency must be. -->
 	 	<dependency>
 	        <groupId>org.springframework.cloud</groupId>
