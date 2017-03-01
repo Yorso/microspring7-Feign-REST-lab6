@@ -10,7 +10,7 @@
 
 2.  Start the common-config-server and the common-eureka-server. These are versions of what you created and used in the last few chapters.
 
-3.  Lab 6 has copies of the word server and sentence server that have been slightly refactored from what we worked on previously.  Start 5 separate copies of the lab-6-word-server, using the profiles "subject", "verb", "article", "adjective", and "noun".  There are several ways to do this, depending on your preference:
+3.  Lab 6 has copies of the word server and sentence server that have been slightly refactored from what we worked on previously.  Start 5 separate copies of the microspring7-word-server-feign-lab6, using the profiles "subject", "verb", "article", "adjective", and "noun".  There are several ways to do this, depending on your preference:
   - If you wish to use Maven, open separate command prompts in the target directory and run these commands:
     - mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=subject"
     - mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=verb"
@@ -27,7 +27,7 @@
 
   **Part 2 - Refactor**
 
-7.  First, take a look at the lab-6-sentence-server project.  It has been refactored a bit from previous examples.  The controller has been simplified to do only web work, the task of assembling the sentence is now in the service layer.  The SentenceService uses @Autowire to reference individual DAO components which have been created to obtain the words from the remote resources.  Since all of the remote resources are structurally the same, there is a fair bit of inheritance in the dao package to make things easy.  But each uses the same Ribbon client technology and RestTemplate used previously.
+7.  First, take a look at the microspring7-sentence-server-feign-lab6 project.  It has been refactored a bit from previous examples.  The controller has been simplified to do only web work, the task of assembling the sentence is now in the service layer.  The SentenceService uses @Autowire to reference individual DAO components which have been created to obtain the words from the remote resources.  Since all of the remote resources are structurally the same, there is a fair bit of inheritance in the dao package to make things easy.  But each uses the same Ribbon client technology and RestTemplate used previously.
 
 8.  Open the POM.  Add another dependency for spring-cloud-starter-feign.
 
